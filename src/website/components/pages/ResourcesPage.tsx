@@ -10,7 +10,7 @@ const ResourcesPage = () => {
   return (
     <WebsiteLayout>
       
-      <section className="relative min-h-screen flex items-center bg-black overflow-hidden md:pt-32">
+      <section className="relative min-h-screen flex items-center bg-black overflow-hidden pt-32">
         
         {/* ATMOSPHERE - Right Aligned Glow (Blue/Cyan for Knowledge) */}
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none" />
