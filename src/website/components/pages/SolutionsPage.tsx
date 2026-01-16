@@ -128,7 +128,7 @@ const SolutionsPage: React.FC = () => {
     <WebsiteLayout>
       
       {/* 1. HERO SECTION (Left Aligned, Immersive) */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-black pt-32">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black pt-32">
         {/* Right-Aligned Background Image */}
         <div className="absolute inset-0 z-0">
              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=1740&auto=format&fit=crop')] bg-cover bg-[center_right] opacity-50 saturate-0" />
@@ -158,7 +158,7 @@ const SolutionsPage: React.FC = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1, duration: 0.8 }}
-                    className="text-6xl md:text-8xl font-heading font-bold text-white leading-[0.95] tracking-tight"
+                    className="text-5xl md:text-8xl font-heading font-bold text-white leading-[0.95] tracking-tight"
                  >
                     Built for <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500">

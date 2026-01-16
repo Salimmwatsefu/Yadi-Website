@@ -81,12 +81,7 @@ const WebsiteNavbar: React.FC = () => {
 
         {/* CTAs */}
         <div className="flex items-center gap-4">
-             <button 
-                onClick={() => window.location.href = 'https://tickets.yadi.app/login'} 
-                className="hidden md:block text-sm font-medium text-zinc-300 hover:text-white transition-colors"
-             >
-                Sign In
-             </button>
+            
              <button 
                 onClick={() => window.location.href = 'https://tickets.yadi.app'}
                 className="group relative px-5 py-2 rounded-full bg-white text-black font-bold text-sm overflow-hidden hover:scale-105 transition-transform"

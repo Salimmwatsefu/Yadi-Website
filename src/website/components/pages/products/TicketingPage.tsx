@@ -225,7 +225,7 @@ const TicketingPage: React.FC = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1, duration: 0.8 }}
-                    className="text-6xl md:text-8xl font-heading font-bold text-white leading-[0.9] tracking-tighter"
+                    className="text-5xl md:text-8xl font-heading font-bold text-white leading-[0.9] tracking-tighter"
                  >
                     Sell Tickets.<br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-600">
@@ -253,13 +253,13 @@ const TicketingPage: React.FC = () => {
                  >
                       <button 
                           onClick={() => window.location.href = 'https://tickets.yadi.app'}
-                          className="px-10 py-5 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform flex items-center gap-2 shadow-[0_0_50px_rgba(255,255,255,0.2)]"
+                          className="md:px-10 px-5 py-5 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform flex items-center gap-2 shadow-[0_0_50px_rgba(255,255,255,0.2)]"
                       >
                           Get Started <ArrowRight className="w-5 h-5" />
                       </button>
                       <button 
                           onClick={() => window.location.href = 'https://tickets.yadi.app'}
-                          className="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-white/10 transition-colors backdrop-blur-md"
+                          className="md:px-10 px-5 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-white/10 transition-colors backdrop-blur-md"
                       >
                           View Demo
                       </button>

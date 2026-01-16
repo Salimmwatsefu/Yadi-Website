@@ -58,7 +58,7 @@ const AboutPage = () => {
                                       <span className="text-white">About</span>
                                   </motion.div>
                  
-                 <h1 className="text-6xl md:text-8xl font-heading font-bold text-white leading-[0.9] tracking-tighter md:w-[150vh]">
+                 <h1 className="text-5xl md:text-8xl font-heading font-bold text-white leading-[0.9] tracking-tighter md:w-[150vh]">
                     Building the <br/>
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 to-zinc-600">
                         Infrastructure
@@ -66,7 +66,7 @@ const AboutPage = () => {
                     For Modern Events.
                  </h1>
 
-                 <p className="text-xl md:text-2xl text-zinc-400 md:max-w-3xl max-w-lg  leading-relaxed border-l-2 border-white/10 pl-6">
+                 <p className="text-lg md:text-2xl text-zinc-400 md:max-w-3xl max-w-lg  leading-relaxed border-l-2 border-white/10 pl-6">
                     Yadi is an event technology platform that powers ticketing, event operations, and on-ground execution for organizers, teams, and enterprises.
                  </p>
 

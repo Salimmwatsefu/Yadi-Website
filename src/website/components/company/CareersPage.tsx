@@ -15,10 +15,10 @@ const CareersPage = () => {
     <WebsiteLayout>
       
       {/* 1. HERO */}
-      <section className="relative min-h-[70vh] flex items-center bg-black pt-32 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center bg-black pt-32 overflow-hidden">
         {/* Background Image - Fixed */}
         <div className="absolute inset-0 z-0">
-             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 saturate-0" />
+             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-40 saturate-0" />
              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
         </div>
 

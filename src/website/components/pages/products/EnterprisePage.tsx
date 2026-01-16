@@ -170,6 +170,8 @@ const EnterprisePage: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     className="flex items-center gap-2 text-sm font-medium text-zinc-500"
                  >
+                      <span onClick={() => window.location.href='/website'} className="hover:text-white cursor-pointer transition-colors">Home</span>
+                                         <ChevronRight className="w-3 h-3" />
                      <span className="hover:text-white cursor-pointer transition-colors">Products</span>
                      <ChevronRight className="w-3 h-3" />
                      <span className="text-white">Enterprise</span>
@@ -180,7 +182,7 @@ const EnterprisePage: React.FC = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1, duration: 0.8 }}
-                    className="text-6xl md:text-8xl font-heading font-bold text-white leading-[0.95] tracking-tight"
+                    className="text-5xl md:text-8xl font-heading font-bold text-white leading-[0.95] tracking-tight"
                  >
                     Enterprise <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-600">

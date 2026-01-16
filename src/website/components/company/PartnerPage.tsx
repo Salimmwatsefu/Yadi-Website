@@ -9,7 +9,7 @@ const PartnerPage = () => {
   return (
     <WebsiteLayout>
       
-      <section className="relative min-h-screen flex items-center bg-black overflow-hidden md:pt-32">
+      <section className="relative min-h-screen flex items-center bg-black overflow-hidden pt-32">
         
         {/* ATMOSPHERE - Right Aligned Glow */}
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none" />
@@ -38,7 +38,7 @@ const PartnerPage = () => {
                 </div>
 
                 {/* Headline */}
-                <h1 className="text-6xl md:text-8xl font-heading font-bold text-white tracking-tighter leading-[0.9]">
+                <h1 className="text-5xl md:text-8xl font-heading font-bold text-white tracking-tighter leading-[0.9]">
                     Building the <br/>
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-500">
                         Ecosystem.
@@ -46,7 +46,7 @@ const PartnerPage = () => {
                 </h1>
                 
                 {/* Subtext */}
-                <p className="text-xl text-zinc-400 max-w-xl leading-relaxed border-l-2 border-purple-500/20 pl-6">
+                <p className="text-lg text-zinc-400 max-w-xl leading-relaxed border-l-2 border-purple-500/20 pl-6">
                     We are architecting a unified program for Agencies, Venues, and Integrators. Be the first to access the infrastructure.
                 </p>
 
@@ -60,8 +60,8 @@ const PartnerPage = () => {
                 </div>
 
                 {/* Input Form */}
-                <div className="pt-8 max-w-md">
-                    <div className="p-1 rounded-2xl bg-gradient-to-r from-zinc-800 to-zinc-900">
+                <div className="pt-8 ">
+                    <div className="p-1 rounded-2xl bg-gradient-to-r from-zinc-800 to-zinc-900 flex justify-center">
                         <div className="bg-black rounded-xl p-2 flex items-center gap-2">
                             <input 
                                 type="email" 
