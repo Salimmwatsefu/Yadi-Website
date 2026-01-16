@@ -79,8 +79,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, closeMenu }) => {
                      <ChevronLeft className="w-5 h-5" /> Back
                  </button>
              ) : (
-                 <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                     <span className="font-heading font-bold text-white">Y</span>
+                 <div className="w-32 flex items-center justify-center">
+                     <img
+                     src='Logo.png'
+                     alt='logo'
+                     />
                  </div>
              )}
              
