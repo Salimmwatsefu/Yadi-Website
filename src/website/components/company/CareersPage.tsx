@@ -15,14 +15,14 @@ const CareersPage = () => {
     <WebsiteLayout>
       
       {/* 1. HERO */}
-      <section className="relative min-h-[70vh] flex items-center bg-black md:pt-32 overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center bg-black pt-32 overflow-hidden">
         {/* Background Image - Fixed */}
         <div className="absolute inset-0 z-0">
              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 saturate-0" />
              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        <div className="max-w-7xl mx-auto px-6 pb-20 relative z-10 w-full">
             <motion.div style={{ y: yHero }} className="max-w-4xl">
                  {/* Breadcrumb */}
                  <motion.div 

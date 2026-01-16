@@ -191,7 +191,7 @@ const TicketingPage: React.FC = () => {
     <WebsiteLayout>
       
       {/* 1. LEFT-ALIGNED HERO */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black md:pt-32 ">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black md:pt-32 pt-20">
         {/* RIGHT-ALIGNED BACKGROUND IMAGE (Huge, Blends In) */}
         <div className="absolute inset-0 z-0">
              {/* The Image (Right Aligned) */}
@@ -213,6 +213,8 @@ const TicketingPage: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     className="flex items-center gap-2 text-sm font-medium text-zinc-500"
                  >
+                      <span onClick={() => window.location.href='/website'} className="hover:text-white cursor-pointer transition-colors">Home</span>
+                                         <ChevronRight className="w-3 h-3" />
                      <span className="hover:text-white cursor-pointer transition-colors">Products</span>
                      <ChevronRight className="w-3 h-3" />
                      <span className="text-white">Ticketing</span>

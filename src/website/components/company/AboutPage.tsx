@@ -33,7 +33,7 @@ const AboutPage = () => {
     <WebsiteLayout>
       
       {/* 1. HERO: LEFT ALIGNED & INFRASTRUCTURAL */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black md:pt-32 pt-20">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black pt-32">
         {/* Right-Aligned Background Image (Production/Rigging) */}
         <div className="absolute inset-0 z-0">
              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522158637959-30385a09e0da?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-[center_right] opacity-40 saturate-0" />
@@ -51,6 +51,8 @@ const AboutPage = () => {
                                      animate={{ opacity: 1, x: 0 }}
                                      className="flex items-center gap-2 text-sm font-medium text-zinc-500"
                                   >
+                                      <span onClick={() => window.location.href='/website'} className="hover:text-white cursor-pointer transition-colors">Home</span>
+                                                         <ChevronRight className="w-3 h-3" />
                                       <span className="hover:text-white cursor-pointer transition-colors">Company</span>
                                       <ChevronRight className="w-3 h-3" />
                                       <span className="text-white">About</span>

@@ -128,7 +128,7 @@ const SolutionsPage: React.FC = () => {
     <WebsiteLayout>
       
       {/* 1. HERO SECTION (Left Aligned, Immersive) */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-black pt-20">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-black pt-32">
         {/* Right-Aligned Background Image */}
         <div className="absolute inset-0 z-0">
              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=1740&auto=format&fit=crop')] bg-cover bg-[center_right] opacity-50 saturate-0" />

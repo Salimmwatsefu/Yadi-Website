@@ -147,7 +147,7 @@ const EnterprisePage: React.FC = () => {
     <WebsiteLayout>
       
       {/* 1. LEFT-ALIGNED HERO */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-black md:pt-32 pt-20">
         {/* RIGHT-ALIGNED BACKGROUND IMAGE */}
         <div className="absolute inset-0 z-0">
              {/* Use specific conference image */}
@@ -159,7 +159,7 @@ const EnterprisePage: React.FC = () => {
              <div className="absolute inset-0 bg-emerald-900/10 mix-blend-overlay" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 md:pt-20 relative z-10 w-full grid lg:grid-cols-2">
+        <div className="max-w-7xl mx-auto px-6  relative z-10 w-full grid lg:grid-cols-2">
             <motion.div 
                 style={{ y: yHero }}
                 className="space-y-8"

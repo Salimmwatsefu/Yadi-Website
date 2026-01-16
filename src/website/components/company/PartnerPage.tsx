@@ -15,7 +15,7 @@ const PartnerPage = () => {
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none" />
         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/10 rounded-full blur-[150px] pointer-events-none animate-pulse-slow" />
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10 w-full grid lg:grid-cols-2">
+        <div className="max-w-7xl mx-auto px-6 pb-20 relative z-10 w-full grid lg:grid-cols-2">
             
             <motion.div 
                 initial={{ opacity: 0, x: -20 }}

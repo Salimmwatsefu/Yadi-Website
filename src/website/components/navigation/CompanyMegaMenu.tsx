@@ -50,7 +50,7 @@ const CompanyMegaMenu: React.FC<CompanyMegaMenuProps> = ({ closeMenu, mobileMode
         className={containerClasses}
         onMouseLeave={!mobileMode ? closeMenu : undefined}
     >
-        <div className={`w-full ${mobileMode ? '' : 'max-w-7xl mx-auto px-6'} h-full`}>
+        <div className={`w-full ${mobileMode ? '' : 'max-w-7xl mx-auto px-6'} h-full pt-10`}>
             {/* Grid vs Flex Column Switch */}
             <div className={`grid ${mobileMode ? 'flex flex-col gap-6' : 'grid-cols-12 gap-6'} h-full`}>
                 

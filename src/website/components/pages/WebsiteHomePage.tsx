@@ -23,7 +23,7 @@ import WebsiteLayout from '../../layouts/WebsiteLayout';
 // --- ANIMATION VARIANTS ---
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
 };
 
 const staggerContainer = {
@@ -41,7 +41,7 @@ const floatAnimation = {
     transition: {
       duration: 6,
       repeat: Infinity,
-      ease: "easeInOut"
+      ease: "easeInOut" as const
     }
   }
 };
@@ -54,7 +54,7 @@ const floatAnimationDelayed = {
       duration: 7,
       delay: 1,
       repeat: Infinity,
-      ease: "easeInOut"
+      ease: "easeInOut" as const
     }
   }
 };
@@ -111,12 +111,12 @@ const HeroSection = () => {
                 variants={staggerContainer}
                 className="space-y-8 max-w-2xl"
             >
-                <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs font-medium text-primary shadow-[0_0_15px_rgba(236,72,153,0.3)]">
-                    <Sparkles className="w-3 h-3" />
+                <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs font-medium text-primary shadow-[0_0_5px_rgba(236,72,153,0.3)]">
+                   
                     <span className="tracking-wide">THE OPERATING SYSTEM FOR EVENTS</span>
                 </motion.div>
 
-                <motion.h1 variants={fadeInUp} className="text-6xl md:text-8xl font-heading font-bold leading-[0.95] tracking-tight text-white">
+                <motion.h1 variants={fadeInUp} className="text-5xl md:text-8xl font-heading font-bold leading-[0.95] tracking-tight text-white">
                     Built for the <br/>
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-400 to-zinc-600">
                         Unforgettable.
@@ -130,14 +130,14 @@ const HeroSection = () => {
 
                 <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 pt-4">
                     <button 
-                        onClick={() => window.location.href = 'https://tickets.yadi.app'}
-                        className="px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2 shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+                        onClick={() => window.location.href = 'https://tickets.yadi.app/login'}
+                        className="md:px-8 px-4 py-4 bg-white text-black rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2 shadow-[0_0_30px_rgba(255,255,255,0.2)]"
                     >
                         Start Creating <ArrowRight className="w-5 h-5" />
                     </button>
                     <button 
                         onClick={() => window.location.href = 'https://tickets.yadi.app'}
-                        className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-colors backdrop-blur-md"
+                        className="md:px-8 px-4 py-4 bg-white/5 border border-white/10 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-colors backdrop-blur-md"
                     >
                         Explore Events
                     </button>
@@ -189,7 +189,7 @@ const HeroSection = () => {
                                     {[1,2,3,4].map(i => <div key={i} className="w-1 h-1 bg-zinc-600 rounded-full" />)}
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-bold text-white">Neon Nights Festival</h3>
+                            <h3 className="text-2xl font-bold text-white">Amapiano Festival</h3>
                             <div className="flex items-center gap-2 text-zinc-400 text-sm">
                                 <Calendar className="w-4 h-4" />
                                 <span>Dec 24, 2026 • 8:00 PM</span>
@@ -219,7 +219,7 @@ const TrustSection = () => (
       </p>
       <div className="flex flex-wrap justify-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
          {/* Using Text for logos to keep it clean, replace with SVGs later */}
-         {['SAFARICOM', 'NAIROBI DESIGN', 'BOILER ROOM', 'AFRICA TECH'].map((brand, i) => (
+         {['WORLD TAEKWONDO'].map((brand, i) => (
              <span key={i} className="text-lg font-heading font-bold text-white tracking-widest">{brand}</span>
          ))}
       </div>
@@ -249,8 +249,8 @@ const PillarsSection = () => (
                 
                 {/* 1. NIGHTLIFE CARD */}
                 <div className="group relative h-[600px] rounded-[2.5rem] overflow-hidden border border-white/10">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?auto=format&fit=crop&q=80')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black opacity-90" />
+                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-50" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/90 to-black opacity-90" />
                     
                     <div className="absolute inset-0 p-12 flex flex-col justify-end">
                         <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-8 border border-white/10">
@@ -275,8 +275,8 @@ const PillarsSection = () => (
 
                 {/* 2. ENTERPRISE CARD */}
                 <div className="group relative h-[600px] rounded-[2.5rem] overflow-hidden border border-white/10">
-                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&q=80')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/40 to-zinc-950 opacity-90" />
+                    <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&q=80')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-50" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/90 to-zinc-950 opacity-90" />
                     
                     <div className="absolute inset-0 p-12 flex flex-col justify-end">
                          <div className="w-16 h-16 rounded-2xl bg-emerald-500/20 backdrop-blur-md flex items-center justify-center mb-8 border border-white/10">
@@ -314,9 +314,9 @@ const LifecycleSection = () => (
                 {/* 1. BEFORE */}
                 <div className="space-y-6">
                     <div className="relative h-64 rounded-3xl bg-zinc-800 border border-white/5 overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-100 transition-opacity duration-500" />
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <Layers className="w-16 h-16 text-zinc-700 group-hover:text-white transition-colors duration-500" />
+                            <Layers className="w-16 h-16 text-zinc-500 group-hover:text-white transition-colors duration-500" />
                         </div>
                         {/* UI Overlay Mockup */}
                         <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md p-4 rounded-xl border border-white/10">
@@ -340,9 +340,9 @@ const LifecycleSection = () => (
                 {/* 2. DURING */}
                 <div className="space-y-6">
                     <div className="relative h-64 rounded-3xl bg-zinc-800 border border-white/5 overflow-hidden group">
-                         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-orange-500/20 opacity-100 transition-opacity duration-500" />
                          <div className="absolute inset-0 flex items-center justify-center">
-                            <QrCode className="w-16 h-16 text-zinc-700 group-hover:text-white transition-colors duration-500" />
+                            <QrCode className="w-16 h-16 text-zinc-500 group-hover:text-white transition-colors duration-500" />
                         </div>
                          {/* UI Overlay Mockup */}
                         <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md p-4 rounded-xl border border-white/10">
@@ -368,9 +368,9 @@ const LifecycleSection = () => (
                 {/* 3. AFTER */}
                 <div className="space-y-6">
                     <div className="relative h-64 rounded-3xl bg-zinc-800 border border-white/5 overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 opacity-100 transition-opacity duration-500" />
                          <div className="absolute inset-0 flex items-center justify-center">
-                            <BarChart3 className="w-16 h-16 text-zinc-700 group-hover:text-white transition-colors duration-500" />
+                            <BarChart3 className="w-16 h-16 text-zinc-500 group-hover:text-white transition-colors duration-500" />
                         </div>
                          {/* UI Overlay Mockup */}
                         <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md p-4 rounded-xl border border-white/10">
@@ -404,7 +404,7 @@ const FeaturesBento = () => (
                 
                 {/* 1. LARGE FEATURE: ANALYTICS (The Visual You Liked) */}
                 <div className="md:col-span-2 md:row-span-2 rounded-[2rem] bg-zinc-900 border border-white/10 relative overflow-hidden group">
-                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" />
+                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-80 mix-blend-overlay group-hover:scale-105 transition-transform duration-700" />
                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                      
                      <div className="absolute bottom-0 left-0 p-10 w-full">
