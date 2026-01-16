@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+/* --- THEME CONFIGURATION (Tailwind v4) --- */
+@theme {
+  /* 1. Typography */
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* 2. The "Void Black" Palette */
+  --color-background: #09090b; /* Zinc 950 */
+  --color-surface: #18181b;    /* Zinc 900 */
+  --color-surface-highlight: #27272a; /* Zinc 800 */
+
+  /* 3. Brand Colors */
+  --color-primary: #ec4899;       /* Pink 500 */
+  --color-primary-hover: #db2777; /* Pink 600 */
+  
+  --color-secondary: #8b5cf6;     /* Violet 500 */
+  
+  --color-success: #10B981;       /* M-Pesa Green */
+  --color-destructive: #EF4444;   /* Red 500 */
+
+  /* 4. Custom Shadows (Glow Effects) */
+  --shadow-neon: 0 0 20px rgba(236, 72, 153, 0.5);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+  /* 5. Animations */
+  --animate-blob: blob 7s infinite;
+  --animate-scroll: scroll 20s linear infinite;
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+
+
+  @keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+
+}
+
+/* --- STANDARD CSS RESETS --- */
+body {
+  background-color: var(--color-background);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* --- UTILITY CLASSES (Gradients) --- */
+/* In v4, we can just use standard CSS classes for complex gradients */
+.bg-neon-gradient {
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+}
+
+.bg-ocean-gradient {
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* --- SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-highlight);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+
+
+
+:root {
+  
+  --ent-bg-main: #000000;      /* True Black */
+  --ent-bg-card: #09090b;      /* Zinc 950 - Slightly lighter for cards */
+  --ent-bg-hover: #18181b;     /* Zinc 900 - Hover state */
+
+  /* Borders */
+  --ent-border: #27272a;       /* Zinc 800 - Subtle outlines */
+  --ent-border-active: #10b981; /* Emerald 500 - Active State */
+
+  /* The "Emerald" Accents */
+  --emerald-primary: #10b981;  /* Emerald 500 */
+  --emerald-glow: #34d399;     /* Emerald 400 - For text/glows */
+  --emerald-dim: rgba(16, 185, 129, 0.1); /* Subtle backgrounds */
+  --emerald-border: rgba(16, 185, 129, 0.3); /* Glassy borders */
+  
+  /* Text */
+  --ent-text-main: #ffffff;    /* Pure White */
+  --ent-text-muted: #a1a1aa;   /* Zinc 400 - Crisp Grey */
+}
+
+/* --- Utility Classes --- */
+
+.bg-enterprise-main {
+  background-color: var(--ent-bg-main);
+}
+
+.bg-enterprise-card {
+  background-color: var(--ent-bg-card);
+}
+
+.text-emerald-brand {
+  color: var(--emerald-primary);
+}
+
+/* The Emerald Laser Glow */
+.border-emerald-glow {
+  border-color: var(--ent-border);
+  transition: all 0.3s ease;
+}
+
+.border-emerald-glow:hover {
+  border-color: var(--emerald-primary);
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25); /* Green Laser Glow */
+}
+
+.badge-emerald {
+  background-color: var(--emerald-dim);
+  color: var(--emerald-glow);
+  border: 1px solid var(--emerald-border);
+}
